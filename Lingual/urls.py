@@ -20,6 +20,6 @@ from Speak import views
 
 urlpatterns = [
     path('', views.text_create_view, name = "content-create"),
-    #path('content', views.audio_output_view, name = "content-speak"),
+    path('content', views.audio_output_view, name = "content-speak"),
     path('admin/', admin.site.urls),
 ]

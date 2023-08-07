@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-#import os
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -117,11 +117,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-'''Used later
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'Static'),
 ]
-'''
 # Add the following line to ensure the static files are served correctly during development
 # (This is not recommended for production; use a proper static file server like NGINX or a CDN)
 #STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
