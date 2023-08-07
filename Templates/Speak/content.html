@@ -1,0 +1,10 @@
+#will be used in later versions
+{% extends 'base.html' %}
+{%block content%} 
+<h2>Here is the given content :</h2>
+<audio controls>
+    <source src="{{ audio_url }}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<P>{{ object }}</P>
+{%endblock%}
