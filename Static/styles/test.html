@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cool Template</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Blog Converter</h1>
+    
+    <div class="form-group center">
+      <label for="blogInput">Enter your blog:</label>
+      <textarea id="blogInput" rows="5" cols="50"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="blogLink">Enter blog link:</label>
+      <input type="text" id="blogLink">
+    </div>
+
+    <div id="settingsIcon">
+      <img src="settings-icon.png" alt="Settings" width="30" height="30">
+    </div>
+
+    <div id="settingsPanel" class="inactive">
+      <label for="inputLanguage">Choose language for input text:</label>
+      <select id="inputLanguage">
+        <option value="en">English</option>
+        <!-- Add more language options here -->
+      </select>
+
+      <label for="conversionLanguage">Choose language for conversion:</label>
+      <select id="conversionLanguage">
+        <option value="en">English</option>
+        <!-- Add more language options here -->
+      </select>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code remains the same
+  </script>
+</body>
+</html>

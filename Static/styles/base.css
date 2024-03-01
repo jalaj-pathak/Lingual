@@ -1,0 +1,73 @@
+body {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+label {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+}
+
+textarea{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;   
+    font-size: 19px;
+}
+
+.background{
+    background-image: url(https://cdn.pixabay.com/photo/2020/03/09/15/59/scifi-4916165_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.container{
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+}
+
+.form-create{
+    font-size: 20px;
+}
+
+.form-textarea{
+    color: black;   
+}
+.input-save{
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(126, 31, 126);
+    border-radius: 10px;
+    border-color: aqua;
+    color: white;
+}
+
+.save-line{
+    background-color: inherit;
+    display: flex;
+    justify-content: flex-end;
+}
+.css-class{
+    background-color: #007bff; /* Default background color */
+    color: #fff; /* Text color */
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+  }
+  
+.css-class:hover{
+    background-color: #0056b3; 
+}
+  
+
