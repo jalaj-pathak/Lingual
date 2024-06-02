@@ -6,6 +6,7 @@ body {
     min-height: 100vh;
     background-color: aliceblue;
 }
+
 label {
     display: flex;
     position: relative;
@@ -33,6 +34,8 @@ textarea{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: whitesmoke;
+    height: auto; /* Set a fixed height */
+    overflow-y: scroll;
 }
 
 .form-create{
@@ -40,15 +43,7 @@ textarea{
 }
 
 .form-textarea{
-    color: black;   
-}
-.input-save{
-    font-size: 15px;
-    padding: 5px 10px 5px 10px;
-    background-color: rgb(126, 31, 126);
-    border-radius: 10px;
-    border-color: aqua;
-    color: white;
+    color: black; 
 }
 
 .save-line{
@@ -56,8 +51,9 @@ textarea{
     display: flex;
     justify-content: flex-end;
 }
+
 .css-class{
-    background-color: #007bff; /* Default background color */
+    background-color: #007bff; 
     color: #fff; /* Text color */
     border: none;
     font-size: 16px;
@@ -69,5 +65,11 @@ textarea{
 .css-class:hover{
     background-color: #0056b3; 
 }
-  
 
+.link-input {
+    padding: 5px;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    padding-inline-end: 1px;
+  }

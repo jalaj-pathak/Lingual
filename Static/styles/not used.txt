@@ -45,10 +45,10 @@ label {
 
 textarea, input[type="text"], select {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
+    padding: 08px;
+    border: 5px solid #ccc;
     border-radius: 4px;
-    resize: vertical; /* Allow vertical resizing of textarea */
+ /* Allow vertical resizing of textarea */
 }
 
 #settingsIcon {
