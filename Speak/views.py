@@ -9,6 +9,19 @@ import pytesseract
 from deep_translator import GoogleTranslator
 
 def text_create_view(request):
+    """
+    Handle the creation of a new Speak object via a form.
+
+    If the request method is POST, it processes the submitted form data.
+    If the form is valid, it saves the form and redirects to the 'content-speak' page.
+    Otherwise, it renders an empty form.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered 'Speak/create.html' template with the form context.
+    """
     if request.method == 'POST':
         form = SpeakForm(request.POST, request.FILES)
         if form.is_valid():
@@ -21,6 +34,15 @@ def text_create_view(request):
     return render(request, "Speak/create.html", context)
 
 def web_scrape():
+    """
+    Scrape content from a webpage whose URL is stored in the last Speak object.
+
+    Fetches the page content, extracts the main heading and all paragraph texts,
+    and combines them into a single string.
+
+    Returns:
+        str: The combined content from the webpage.
+    """
     page = requests.get(Speak.objects.last().link_to_access)
     soup  = BeautifulSoup(page.text, "html.parser")
     heading = soup.find('h1')
@@ -30,9 +52,21 @@ def web_scrape():
     return main_content
 
 def audio_output_view(request):   
-    #import pythoncom
-    #pythoncom.CoInitialize()
-    # Retrieve the last saved text from the model (or use any other logic to get the desired text)
+     """
+    Generate and return an audio output from the content of the last Speak object.
+
+    Retrieves the content either directly from the object, by scraping a webpage,
+    or by extracting text from an image. Translates the content to the specified
+    language and generates an audio file using gTTS. The audio file is saved temporarily
+    and its URL is passed to the template for rendering.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered 'Speak/content.html' template with the translated text
+                      and audio URL context.
+    """
     
     if Speak.objects.last().content:
         last_saved_text = Speak.objects.last().content
